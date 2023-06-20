@@ -1,0 +1,2097 @@
+
+/* fonts */
+/* regular */
+@font-face {
+    font-family: 'Jura regular';
+    src: local('Jura regular'), url(/css/fonts/Jura.ttf);
+  }
+
+/* regular */
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: local('Montserrat Regular'), url(/css/fonts/Montserrat-Regular.ttf);
+  }
+
+body{
+    padding: 0;
+    margin: auto 0;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+/* header */
+
+.header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+}
+.search input{
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+
+    background-color: #D9D9D9;
+
+    border: none;
+    border-radius: 244px;
+
+    font-family: Montserrat Regular;
+    font-size: 24px;
+}
+
+.search button {
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  
+  .search button:before {
+    content: "\f002";
+    font-size: 16px;
+    color: #F9F0DA;
+  }
+
+  .search input:focus {
+    outline:none;
+  }
+
+.header_title {
+    font-family: Jura regular;
+    font-size: 47px;
+
+    padding-bottom: 1%;
+}
+
+.btn_auth {
+    border-radius: 244px;
+    border: none;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+
+    font-family: Montserrat Regular;
+    font-size: 24px;
+
+    padding: 1% 3%;
+
+    background-color: #C6BEA5;
+}
+
+footer {
+    background: #C6BEA5;
+
+    margin-top: 130px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: Jura regular;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    align-items: center;
+}
+
+.footer_main_text {
+    font-size: 47px;
+}
+
+.footer_main_text_description {
+    font-size: 31px;
+}
+
+.footer_main_contacts {
+    font-size: 25px;
+}
+
+.footer_main_bthome {
+    width: 50px;
+    height: 50px;
+}
+
+/*- - - - - - - - registration page - - - - - - - -*/
+
+main {
+    font-family: Jura regular;
+}
+
+.form {
+    min-height: 100vh;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    
+
+    display: flex;
+    justify-content: center;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 980px;
+    height: 800px;
+
+    background-color: #C6BEA5;
+
+    border-radius: 104px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 90%;
+}
+
+.form form .title-form {
+    font-size: 48px;
+    line-height: 57px;
+    font-style: normal;
+    font-weight: 400;
+
+    margin-top: 4%;
+}
+
+/* left part form */
+
+.form-container-left {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.image-preview {
+    width: 165px;
+    height: 165px;
+    background-color: #FFF;
+    object-fit: cover;
+
+    border-radius: 244px;
+}
+
+.input-file {
+	position: relative;
+	display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 270px;
+    height: 100px;
+}
+
+.input-file-btn {
+	position: relative;
+	display: inline-block;
+
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+
+	font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+	color: rgb(0 0 0);
+	text-align: center;
+    vertical-align: middle;
+
+	border-radius: 244px;
+	background-color: #FFF;
+	
+    padding: 2% 2%;
+	
+
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file-text {
+	padding: 0 10px;
+	line-height: 40px;
+	display: inline-block;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Hover/active */
+.input-file:hover .input-file-btn {
+	background-color: #D9D9D9;
+}
+.input-file:active .input-file-btn {
+	background-color: #7f7a6a;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + .input-file-btn {
+	background-color: #D9D9D9;
+}
+
+
+
+/* right part form */
+
+.form-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 50%;
+
+    height: 500px;
+}
+
+.form form .box{
+    border-radius: 244px;
+
+    font-family: Jura regular;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    letter-spacing: 0.18em;
+    color: black;
+
+    padding: 3% 3%;
+
+    background-color: #FFF;
+
+    border: none;
+    
+}
+
+
+.box:focus{
+   outline: none;
+}
+
+.btn-form {
+    background: #383A39;
+    border-radius: 15px;
+    border: none;
+
+    width: 40%;
+
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+    letter-spacing: 0.18em;
+
+    color: #FFFFFF;
+
+    padding: 1.5% 4%;
+    margin-top: 2%;
+}
+
+.btn-form-text {
+    
+    width: 40%;
+
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* - - - - - - - - auth page - - - - - - - -*/
+
+.form-container-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    align-items: center;
+
+    height: 250px;
+}
+
+.form-container-middle .box{
+    width: 600px;
+}
+
+.form-auth {
+    min-height: 100vh;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    
+
+    display: flex;
+    justify-content: center;
+}
+
+.form-auth form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    width: 980px;
+    height: 580px;
+
+    background-color: #C6BEA5;
+
+    border-radius: 104px;
+}
+
+.form-auth form .box{
+    border-radius: 244px;
+
+    font-family: Jura regular;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    letter-spacing: 0.18em;
+    color: black;
+
+    padding: 3% 3%;
+
+    background-color: #FFF;
+
+    border: none;
+}
+
+.form-auth form .btn-form-text {
+    margin-top: 3%;
+}
+
+.form-auth form .btn-form {
+    margin-top: 3%;
+    width: 50%;
+}
+
+.form-auth form .title-form {
+    font-size: 48px;
+    line-height: 57px;
+    font-style: normal;
+    font-weight: 400;
+
+    margin-top: 4%;
+}
+
+
+.form-auth {
+    min-height: 100vh;
+    margin-top: 5%;
+    margin-bottom: 0;
+    
+
+    display: flex;
+    justify-content: center;
+}
+
+/* - - - - - - - - index page - - - - - - - -*/
+
+/* our services */
+
+.main_title {
+    font-family: Jura regular;
+    font-size: 47px;
+
+    text-align: center;
+    margin-top: 8%;
+}
+
+.services_circles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-top: 4%;
+}
+
+.services_circle {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.services_circle_img {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 244px;
+
+    background-color: antiquewhite;
+}
+
+.services_circle_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.18em;
+
+    width: 250px;
+
+    margin-top: 5%;
+}
+
+/* top-10 */
+
+/* carousel */
+
+.wrapper .list_books {
+    overflow: hidden;
+
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width: 1100px;
+    position: relative;
+
+
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+.arrow {
+    height: 45px;
+    width: 20px;
+    cursor: pointer;
+    top: 39%;
+    transform: translateY(-50%);
+
+    position: absolute;
+}
+
+.left {
+    left: -25px;
+}
+
+.rigth {
+    right: -30px;
+}
+
+/* cards books  */
+
+.list_books {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 6%;
+    margin-left: 1.5%;
+}
+
+.list_book {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    margin-right: 50px;
+
+    width: 230px;
+
+    cursor: pointer;
+}
+
+.list_book .center {
+    margin-top: 15px;
+}
+
+.list_books .list_book:last-child {
+    margin-right: 10px;
+}
+
+.list_book_img {
+    width: 230px;
+    height: 320px;
+
+    border-radius: 30px;
+}
+
+.list_book_name {
+    max-width: 215px;
+
+    margin-top: 5%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.18em;
+
+    height: 45px;
+
+    /* ограничение строк */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list_book_author {
+    width: 215px;
+
+    margin-top: 6%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.18em;
+
+    min-height: 19px;
+
+     /* ограничение строк */
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+}
+
+/* рейтинг */
+
+.list_book_estimation_rating {
+    width: 150px;
+
+    margin-top: 5%;
+}
+
+.list_book_estimation_rating span{
+    padding: 0;
+	font-size: 25px;
+	line-height: 1;
+	color: lightgrey;
+}
+
+.list_book_estimation_rating > span:before {
+	content: '★';
+}
+.list_book_estimation_rating > span.active {
+	color: gold;
+}
+
+/* heart */
+.list_book_estimation {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    justify-content: space-between;
+}
+
+.heart.fill-color{
+    background-color: #ff2727;
+
+    animation: popup .6s linear;
+    visibility: visible;
+}
+
+.heart.none-color{
+    background-color: #c9c9c9;
+}
+
+.heart {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    background: #c9c9c9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 0 2px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+
+    margin-top: 21px;
+    margin-right: 15px;
+}
+    
+.error {
+    border-color: red !important;
+  }
+  
+  .error-message {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: red;
+  }
+  
+  .error-container {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+.heart::before{
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.heart:after{
+    position: absolute;
+    content: "";
+    right: -50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+}
+
+/*- - - - - - - - profile page - - - - - - - - */
+
+.profile_inf {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+.profile_inf_ava {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 328px;
+    height: 328px;
+
+    border: 6px solid #C6BEA5;
+    border-radius: 244px;
+}
+
+.profile_inf_ava_photo {
+    width: 290px;
+    height: 290px;
+}
+
+.profile_inf_name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57px;
+
+    margin-top: 15px;
+}
+
+.profile_inf_bt_edit {
+    border-radius: 244px;
+    border: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 33px;
+
+    font-family: Montserrat Regular;
+
+    padding: 1% 3%;
+
+    background-color: #C6BEA5;
+
+    margin-top: 25px;
+}
+
+.arrow_1 {
+    height: 45px;
+    width: 20px;
+    cursor: pointer;
+    top: 48%;
+    transform: translateY(-50%);
+
+    position: absolute;
+}
+
+.profile_bt_all {
+    display : inline-block;
+
+    border-radius: 244px;
+    border: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+
+    font-family: Montserrat Regular;
+
+    padding: 1% 3%;
+
+    background-color: #C6BEA5;
+
+    margin-top: 50px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-edit {
+    min-height: 550px;
+    
+
+    display: flex;
+    justify-content: center;
+}
+
+.form-edit form{
+    text-align: center;
+    width: 980px;
+    height: 550px;
+
+    border-radius: 104px;
+
+    margin-top: 35px;
+}
+
+.form-edit form .form-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-edit form .title-form {
+    font-size: 48px;
+    line-height: 57px;
+    font-style: normal;
+    font-weight: 400;
+
+    margin-top: 2%;
+}
+
+/* left part form */
+
+.form-edit form .form-container-left {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.form-edit form .image-preview {
+    width: 165px;
+    height: 165px;
+    background-color: #FFF;
+    object-fit: cover;
+
+    border-radius: 244px;
+}
+
+.form-edit form .input-file {
+	position: relative;
+	display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 270px;
+    height: 100px;
+}
+
+.form-edit form .input-file-btn {
+	position: relative;
+	display: inline-block;
+
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+
+	font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+	color: rgb(0 0 0);
+	text-align: center;
+    vertical-align: middle;
+
+	border-radius: 244px;
+	background-color: #FFF;
+	
+    padding: 2% 2%;
+	
+
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.form-edit form .input-file-text {
+	padding: 0 10px;
+	line-height: 40px;
+	display: inline-block;
+}
+.form-edit form .input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Hover/active */
+.form-edit form .input-file:hover .input-file-btn {
+	background-color: #D9D9D9;
+}
+.form-edit form .input-file:active .input-file-btn {
+	background-color: #7f7a6a;
+}
+ 
+/* Disabled */
+.form-edit form .input-file input[type=file]:disabled + .input-file-btn {
+	background-color: #D9D9D9;
+}
+
+
+
+/* right part form */
+
+.form-edit form .form-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 50%;
+
+    height: 350px;
+}
+
+.form-edit form .box{
+    border-radius: 244px;
+
+    font-family: Jura regular;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    letter-spacing: 0.18em;
+    color: black;
+
+    padding: 3% 3%;
+
+    background-color: #D9D9D9;
+
+    border: none;
+}
+
+
+.form-edit form .box:focus{
+   outline: none;
+}
+
+.form-edit form .btn-form {
+    background: #383A39;
+    border-radius: 15px;
+    border: none;
+
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+    letter-spacing: 0.18em;
+
+    color: #D9D9D9;
+
+    padding: 1.5% 4%;
+    margin-top: 2%;
+}
+
+.btn-form-text {
+    display: inline-block;
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+    background-color: #C6BEA5;
+
+    padding: 1.5% 4%;
+    margin-top: 2%;
+
+    border-radius: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*- - - - - - - - all collection page - - - - - - - - */
+
+.collections {
+    display: flex;
+    justify-content: center;
+
+    max-width: 1110px;
+
+    flex-wrap: wrap;
+}
+
+.list_collection {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 47px;
+
+    text-align: left;
+
+    width: 230px;
+    cursor: pointer;
+
+    margin-top: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 18px;
+}
+
+
+.remove {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+    background-color: #D4937F;
+
+    width: 160px;
+    height: 36px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 100px;
+
+    margin-top: 15px;
+}
+
+.btn-edit {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 40;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+    background-color: #A2DEA0;
+
+    text-align: center;
+
+    width: 220px;
+    height: 36px;
+
+    border: none;
+    border-radius: 100px;
+
+    padding-top: 5px;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+/*- - - - - - - - collection page - - - - - - - - */
+
+.collection_description{
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.18em;
+}
+
+.collections .list_book {
+    margin-right: 47px;
+    margin-top: 60px;
+}
+
+
+/*- - - - - - - - create collection page - - - - - - - - */
+
+textarea {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    letter-spacing: 0.18em;
+    color: black;
+
+    background-color: #D9D9D9;
+
+    border: none;
+    border-radius: 20px;
+    resize: none;
+
+    font-family: Jura regular;
+
+    padding-left: 10px;
+}
+
+.collection_create .form-edit .image-preview {
+    width: 230px;
+    height: 320px;
+
+    border-radius: 50px;
+
+    background-color: #D9D9D9;
+
+}
+.collection_create .form-edit {
+    min-height: 300px;
+}
+
+.collection_create .form-edit form {
+    height: 300px;
+}
+
+.collection_create .form-edit .form-container-right {
+    height: 250px;
+}
+
+textarea {
+    outline: none;
+}
+
+/*- - - - - - - - book page - - - - - - - - */
+
+.book_informations {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 90px;
+}
+
+.book_information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-left: 50px;
+
+    height: 350px;
+}
+
+.book_information_name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57px;
+
+    margin-bottom: 20px;
+}
+
+.book_information_properties {
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+    height: 50px;
+
+}
+
+.book_information_properties_item {
+    font-weight: 800;
+}
+
+.book_information_properties_value {
+    font-weight: 400;
+
+    margin-left: 20px;
+}
+
+/* Рейтинг книги  */
+.rating-area {
+	overflow: hidden;
+	width: 265px;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
+.rate-area > label:active {
+	position: relative;
+}
+
+
+.book_information_properties .heart {
+    margin-top: 8px;
+    margin-left: 20px;
+
+    height: 15px;
+    width: 15px;
+}
+
+.add_book_col {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 40;
+    font-size: 22px;
+    line-height: 27px;
+
+    background-color: #C6BEA5;
+
+    text-align: center;
+
+    border: none;
+    border-radius: 100px;
+
+    padding: 10px 20px;
+}
+
+.center-book {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 70px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+
+    font-size: 22px;
+
+    border-radius: 20px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Стили для списка коллекций */
+  #collection-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #collection-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 20px;
+  }
+  
+  #collection-list li:hover {
+    background-color: #ddd;
+  }
+
+
+.book_description_title {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 26px;
+    letter-spacing: 0.18em;
+
+    margin-top: 70px;
+}
+
+.book_description_text {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+
+    width: 1110px;
+
+    margin-top: 30px;
+
+    letter-spacing: 0.1em;
+
+    word-break: normal;
+}
+
+/* review book  */
+.book_review {
+    display: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.book_review_profile {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.18em;
+
+    text-align: right;
+
+    margin-bottom: 40px;
+    margin-right: 4px;
+    margin-top: 50px;
+}
+
+.book_review_text_back {
+    background: #D9D9D9;
+    border-radius: 41px;
+}
+
+.book_review_text {
+    display: inline-block;
+    margin: 20px 20px;
+
+}
+
+.book_review_text p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+
+
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 5; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+.book_review_alltext {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 23px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
+}
+
+/* Комментарии к книге  */
+.book_commet {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.book_comment_profile_ava {
+    width: 130px;
+    height: 130px;
+}
+
+.book_comment_text {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 50px;
+}
+
+.book_comment_text_nickname {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.18em;
+
+    margin-bottom: 20px;
+}
+
+.book_comment_text_area {
+    background: #D9D9D9;
+    border-radius: 41px;
+
+    width: 700px;
+    height: 100px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.18em;
+
+    padding: 20px 20px;
+}
+
+.send_com {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+.textarea_com {
+    padding: 20px 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.bt {
+    display: flex;
+    justify-content: right;
+}
+
+/* Статус книги  */
+
+.status-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-top: 50px;
+
+    font-size: 20px;
+
+    height: 150px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.1em
+}
+
+.status-button {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.status-button label {
+    margin-left: 20px;
+}
+
+.status-button input[type=radio] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Рецензии пользователя  */
+
+.review {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 40px;
+}
+
+.review .book_information_name {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.review .book_review_text {
+    margin: 0px;
+
+}
+
+.review .buttons {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 70px;
+}
+
+.review .remove {
+    margin-top: 0px;
+    height: 41px;
+
+    margin-left: 30px;
+}
+
+.review .btn-edit {
+    margin-left: -50px;
+}
+
+/* Отдельная рецензия пользователя  */
+
+.review_text p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.review .book_information {
+    height: auto;
+}
+
+/* Создание рецензии  */
+
+.form-container-right-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 80%;
+
+    height: 900px;
+}
+
+.textarea-review {
+    padding: 20px 20px;
+}
+
+.form-size form {
+    height: auto;
+}
+
+.review_create .form-edit form {
+    height: auto;
+}
+
+/* скрываем все книги, начиная с пятой */
+.collections .list_book:nth-child(n+5) {
+    display: none;
+}
+
+/* Страница поиска  */
+
+
+.form-search form .book_description_title{
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.form-search .book_description_title{
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.book_description_title_serch {
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+
+    margin-top: 30px;
+}
+
+.form-search form {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	margin-bottom: 20px;
+
+    width: 500px;
+}
+
+.form-search .collections {
+    justify-content: left;
+
+    margin-top: 0px;
+}
+
+label {
+	margin-top: 5px;
+
+    font-family: Montserrat Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 57px;
+}
+
+.form-search form input {
+    width: 500px;
+    height: 42px;
+    padding-left: 15px;
+
+    background-color: #eaeaea;
+
+    border: none;
+    border-radius: 244px;
+
+    font-family: Montserrat Regular;
+    font-size: 18px;
+
+    color: #8b8989;
+
+    outline:none;
+}
+
+select, input[type="number"] {
+
+    width: 500px;
+    height: 42px;
+    padding-left: 15px;
+
+    background-color: #eaeaea;
+
+    border: none;
+    border-radius: 244px;
+
+    font-family: Montserrat Regular;
+    font-size: 18px;
+
+    color: #8b8989;
+
+    outline:none;
+}
+
+.form-search form input[type="submit"] {
+	margin-top: 20px;
+    width: 200px;
+    background-color: #C6BEA5;
+
+    text-align: center;
+
+    padding-right: 15px;
+
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .collection_create .form-edit form {
+    height: 600px;
+}
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+@keyframes popup {
+    100% {
+        transform: scale(1.2) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1115px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 120px;
+        padding-right: 120px;
+      }
+
+      .header {
+        min-height: 768px;
+      }
+
+      .btn-form {
+        font-size: 15px;
+        width: 40%;
+        
+        align-items: center;
+
+        padding: 2% 3%;
+      }
+
+      .btn-form-text {
+        font-size: 14px;
+        width: 40%;
+      }
+
+      .header-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      
+      .menu input[type="text"], .menu .btn_auth {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .search{
+        margin-top: 15px;
+      }
+      .btn_auth {
+        margin-top: 15px;
+      }
+
+      .form-auth form .title-form {
+        font-size: 38px;
+      }
+
+      .form form .title-form {
+        font-size: 34px;
+      }
+
+      .form-container-middle .box {
+        width: 480px;
+      }
+
+      .form-container-middle {
+        height: 200px;
+      }
+
+      .form-auth form {
+        height: 500px;
+      }
+
+      
+
+      .form-container {
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+    }
+    .form-container-right {
+        width: 80%;
+        height: 370px;
+    }
+
+    .form form {
+        height: 840px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .image-preview {
+        width: 135px;
+        height: 135px;
+    }
+
+    .form form .box  {
+        font-size: 17px;
+    }
+
+    .input-file-btn {
+        font-size: 14px;
+    }
+
+    .input-file {
+        height: 50px;
+    }
+
+    .main_title {
+        font-size: 28px;
+    }
+
+
+    .services_circle_img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .services_circle_text {
+        font-size: 19px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_main_text {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .footer_main_text_description {
+        font-size: 28px;
+    }
+
+    .footer_main_text {
+        margin-bottom: 20px;
+    }
+
+    .footer_main_contacts {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .profile_inf_ava {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile_inf_ava_photo {
+        width: 230px;
+        height: 230px;
+    }
+
+    .profile_inf_name {
+        font-size: 28px;
+    }
+
+    .profile_inf_bt_edit {
+        font-size: 22px;
+    }
+
+    .review .buttons {
+        flex-direction: column;
+        align-items: baseline;
+
+        margin-top: 20px;
+    }
+
+    .review .btn-edit {
+        margin-left: 0px;
+    }
+
+    .review .remove {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .form-edit form .form-container {
+        flex-direction: column;
+    }
+
+    .form-edit form .title-form {
+        font-size: 30px;
+    }
+
+    .collection_create .form-edit form {
+        width: 400px;
+    }
+
+    .collection_create .form-edit .form-container-right {
+        width: 400px;
+    }
+
+    .collection_create .form-edit form {
+        height: 700px;
+    }
+
+    .form-edit form .input-file {
+        height: 50px;
+    }
+
+    .form-container-right-review{
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+
+/*---медиа запросы для mobile----*/
+@media (max-width: 785px) {
+
+    
+
+    .form-edit form .form-container-right{
+        width: 90%;
+        height: 300px;
+    }
+
+    .form-edit form .title-form {
+        font-size: 25px;
+    }
+
+    .form-edit form .input-file-btn{
+        font-size: 15px;
+    }
+    .form form .title-form {
+        font-size: 25px;
+      }
+
+      .form-edit form .box {
+        font-size: 17px;
+      }
+
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+
+    .form-auth form .title-form {
+        font-size: 32px;
+    }
+
+    .header_title {
+        font-size: 38px;
+    }
+
+    .form-auth form {
+        height: 420px;
+    }
+
+    .form-container-middle {
+        height: 170px;
+    }  
+
+    .form-auth form .box {
+        font-size: 17px;
+    }
+
+    .form-auth form .btn-form {
+        width: 40%;
+        font-size: 17px;
+    }
+
+    .form-auth form .btn-form-text {
+        font-size: 14px;
+    }
+
+    .btn_auth {
+        font-size: 18px;
+    }
+
+    .search input {
+        font-size: 19px;
+    }
+
+    .form-auth {
+        min-height: auto;
+    }
+
+    .btn-form {
+        font-size: 10px;
+      }
+
+      .btn-form-text {
+        font-size: 10px;
+        width: 40%;
+      }
+
+      .form-container-middle .box {
+        width: 280px;
+      }
+
+      .btn-form-text a 
+      {
+        font-size: 11px;
+      }
+
+      
+    .services_circles {
+        flex-direction: column;
+    }
+
+    .services_circle_text {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .footer_main_text {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .footer_main_text_description {
+        font-size: 20px;
+    }
+
+    .footer_main_text {
+        margin-bottom: 20px;
+    }
+
+    .footer_main_contacts_text {
+        font-size: 20px;
+    }
+
+    .footer_main_contacts {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .review .book_information_name {
+        font-size: 22px;
+    }
+
+    .review .book_review_text p {
+        font-size: 17px;
+    }
+
+    .list_book_img {
+        width: 173px;
+        height: 240px;
+    }
+
+    .review .btn-edit {
+        font-size: 14px;
+        width: 170px;
+        height: 30px;
+    }
+
+    .review .remove {
+        font-size: 14px;
+        height: 30px;
+        width: 120px;
+    }
+
+    .add_book_col {
+        font-size: 17px;
+    }
+
+    .collections .list_book {
+        width: 173px;
+    }
+    .form-container-right-review{
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    .review{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-search form{
+        width: 250px;
+    }
+
+    .form-search form input {
+        width: 250px;
+    }
+
+    select, input[type="number"] {
+        width: 250px;
+    }
+}
+
