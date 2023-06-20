@@ -1,11 +1,11 @@
 <main class="container">
         <div class="book_informations">
-            <img src="/images/books/MasterMarg.png" alt="" class="list_book_img">
+            <img src="/images/books/<?= $data['book'][0]['image'] ?>" alt="" class="list_book_img">
             <div class="book_information">
-                <div class="book_information_name">Мастер и Маргарита</div>
+                <div class="book_information_name"><?= $data['book'][0]['name'] ?></div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">Автор:</h3>
-                    <h3 class="book_information_properties_value">Булгаков М.А.</h3>
+                    <h3 class="book_information_properties_value"><?= $data['book'][0]['author'] ?></h3>
                 </div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">Жанр:</h3>
@@ -13,29 +13,22 @@
                 </div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">ISBN:</h3>
-                    <h3 class="book_information_properties_value">978-5-17-149175-8</h3>
+                    <h3 class="book_information_properties_value"><?= $data['book'][0]['ISBN'] ?></h3>
                 </div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">Год издания:</h3>
-                    <h3 class="book_information_properties_value">2022</h3>
+                    <h3 class="book_information_properties_value"><?= $data['book'][0]['public_year'] ?></h3>
                 </div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">Возрастные ограничения:</h3>
-                    <h3 class="book_information_properties_value">12+</h3>
+                    <h3 class="book_information_properties_value"><?= $data['book'][0]['censor'] ?></h3>
                 </div>
                 <div class="book_information_properties">
                     <h3 class="book_information_properties_item">Рейтинг:</h3>
-                    <div class="rating-area">
-                        <input type="radio" id="star-5" name="rating" value="5">
-                        <label for="star-5" title="Оценка «5»"></label>	
-                        <input type="radio" id="star-4" name="rating" value="4">
-                        <label for="star-4" title="Оценка «4»"></label>    
-                        <input type="radio" id="star-3" name="rating" value="3">
-                        <label for="star-3" title="Оценка «3»"></label>  
-                        <input type="radio" id="star-2" name="rating" value="2">
-                        <label for="star-2" title="Оценка «2»"></label>    
-                        <input type="radio" id="star-1" name="rating" value="1">
-                        <label for="star-1" title="Оценка «1»"></label>
+                    <div class="list_book_estimation_rating" style="margin-top: 0%;">	
+                        <? for ($i = 0; $i < $data['book'][0]['rate']; $i++) { ?>
+                            <span class="active"></span>
+                        <? } ?>
                     </div>
                 </div>
                 <div class="book_information_properties">
@@ -93,7 +86,8 @@
         <div class="book_description">
             <div class="book_description_title">Описание</div>
             <div class="book_description_text">
-                Бессмертное, загадочное и остроумное «Евангелие от Сатаны» Михаила Булгакова. Роман, уникальный в российской литературе ХХ столетия. Трудно себе представить, какое влияние он оказал на мировую культуру. На основе «Мастера и Маргариты» снимались и продолжают сниматься фильмы и телесериалы, это произведение легло в основу оперы, симфонии, рок-оперы, его иллюстрировали самые знаменитые художники и фотографы.Достаточно перечислить лишь немногих создателей произведений, посвященных шедевру Булгакова и им вдохновленных: Анджей Вайда, Эннио Морриконе, Мик Джаггер, Дэвид Боуи.Чем же заворожила столь разных творческих личностей история о дьяволе и его свите, почтивших своим присутствием Москву 1930-х, о прокураторе Иудеи всаднике Понтии Пилате и нищем философе Иешуа Га-Ноцри, о талантливом и несчастном Мастере и его прекрасной и верной возлюбленной Маргарите?..</div>
+                <?= $data['book'][0]['description'] ?>
+            </div>
         </div>
 
         <!-- Рецензии книги  -->
@@ -213,3 +207,9 @@
         </div>
     </form>
     </main>
+
+
+    <script src="js/reviews_more_in_collection.js" defer></script>
+    <script src="js/book_add_collection.js" defer></script>
+    <script src="js/send_com.js" defer></script>
+    <script src="js/book_status.js" defer></script>

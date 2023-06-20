@@ -14,50 +14,23 @@
         <!-- Блок коллекций -->
         <div class="main_title">Мои коллекции</div>
         <div class="wrapper">
-                <img class="arrow_1 left" id="left" src="/images/arrow_left.png" alt="">
-                <div class="list_books">
+            <img class="arrow_1 left" id="left" src="/images/arrow_left.png" alt="">
+            <div class="list_books">
+                <? if (!empty($data['collections'])): ?>
+                    <? foreach ($data['collections'] as $key => $value) { ?>
                         <div class="list_book">
-                            <a href="profile_collection.html">
-                            <img src="/images/cover_coll1.png" alt="Обложка" class="list_book_img">
-                            <div class="list_book_name">Лучше, чем приём у психолога</div>
-                        </div>
-                    </a>
-                        
-                        <div class="list_book">
-                            <a href="profile_collection.html">
-                                <img src="/images/cover_coll2.png" alt="Обложка" class="list_book_img">
-                                <div class="list_book_name">Пиратские истории</div>
+                            <a href="/collection?id=<?= $key ?>">
+                                <img src="/images/collections/<?= $value['image'] ?>" alt="Обложка" class="list_book_img">
+                                <div class="list_book_name"><?= $value['name'] ?></div>
                             </a>
                         </div>
-                        <div class="list_book">
-                            <a href="profile_collection.html">
-                                <img src="/images/cover_coll3.png" alt="Обложка" class="list_book_img">
-                                <div class="list_book_name">Любимое фэнтези</div>
-                            </a>
-                        </div>
-                        <div class="list_book">
-                            <a href="profile_collection.html">
-                                <img src="/images/cover_coll4.png" alt="Обложка" class="list_book_img">
-                                <div class="list_book_name">Чтиво на каждый день</div>
-                            </a>
-                        </div>
-                        <div class="list_book">
-                            <a href="profile_collection.html">
-                                <img src="/images/cover_coll1.png" alt="Обложка" class="list_book_img">
-                                <div class="list_book_name">Лучше, чем приём у психолога</div>
-                            </a>
-                        </div>
-                        <div class="list_book">
-                            <a href="profile_collection.html">
-                                <img src="/images/cover_coll1.png" alt="Обложка" class="list_book_img">
-                                <div class="list_book_name">Лучше, чем приём у психолога</div>
-                            </a>
-                        </div>
-                </div>
-                <img class="arrow_1 rigth" id="right" src="/images/arrow-rigth.png" alt="">
+                    <? } ?>
+                <? endif; ?>
+            </div>
+            <img class="arrow_1 rigth" id="right" src="/images/arrow-rigth.png" alt="">
         </div>
         <div class="btn">
-            <a class="profile_bt_all" href="/profile_all_collections">Показать все</a>
+            <a class="profile_bt_all" href="/collections">Показать все</a>
         </div>
 
         <!-- Блок рецензий -->

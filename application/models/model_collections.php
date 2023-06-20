@@ -1,6 +1,6 @@
 <?php
 
-class Model_Profile_All_Collections extends Model
+class Model_Collections extends Model
 {
     private $result;
 

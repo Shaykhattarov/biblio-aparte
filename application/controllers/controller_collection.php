@@ -1,12 +1,12 @@
 <?php
 
-class Controller_Profile_Collection extends Controller
+class Controller_Collection extends Controller
 {
     public $model;
 
 	function __construct()
 	{
-		$this->model = new Model_Profile_Collection();
+		$this->model = new Model_Collection();
 		$this->view = new View();
 	}
 
@@ -21,6 +21,6 @@ class Controller_Profile_Collection extends Controller
             $data = $this -> model -> get_collection();
         }
 		
-		$this-> view -> generate('profile_collection_view.php', 'template_view.php', $data);
+		$this-> view -> generate('collection_view.php', 'template_view.php', $data);
 	}
 }
