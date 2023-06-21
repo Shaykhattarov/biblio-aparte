@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="form-container-right">
-                    <input type="text" name="name" placeholder="Ildan" class="box">
+                    <input type="text" name="name" placeholder="<?= $data['nickname'] ?>" class="box">
                     <input type="password" name="password" placeholder="Введите старый пароль" class="box">
                     <input type="password" name="npassword" placeholder="Введите новый пароль" class="box">
                     <input type="password" name="rnpassword" placeholder="Повторите новый пароль" class="box">

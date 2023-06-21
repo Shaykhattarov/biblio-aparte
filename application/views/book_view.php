@@ -49,11 +49,9 @@
               <span class="close">&times;</span>
               <h3 class="modal_content_title">Выберите коллекцию:</h3>
               <ul id="collection-list">
-                <li>В гостях у психолога</li>
-                <li>Пиратские истории</li>
-                <li>Любимое фэнтези</li>
-                <li>Чтиво на каждый день</li>
-                <li>Мои книги</li>
+                <? foreach ($data['collections'] as $key => $value) { ?>
+                    <li><a href="/collection_append?id=<?= $value['id'] ?>&referer=<?= $data['book'][0]['id'] ?>"><?= $value['name'] ?></a></li>
+                <? } ?>
               </ul>
             </div>
         </div>
@@ -92,7 +90,7 @@
 
         <!-- Рецензии книги  -->
         <div class="book_description_title">Рецензии</div>
-        <a href="profile_review_create.html">
+        <a href="/review_create?book_id=<?=$data['book'][0]['id']?>">
             <button class="add_book_col" style="margin-top: 30px;">Написать рецензию</button></a>
         <div class="reviews">
                 <div class="book_review">

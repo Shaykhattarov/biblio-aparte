@@ -1,7 +1,7 @@
 <main class="container">
     <div class="main_title" style="margin-top: 5%;">Мои коллекции</div>
     <div class="center">
-        <a class="btn_auth" href="/profile_collection_create">Создать коллекцию</a>
+        <a class="btn_auth" href="/collection_create">Создать коллекцию</a>
     </div>
     <!-- Блок коллекций -->
     <div class="collections">
@@ -13,7 +13,7 @@
                 
                     <div class="buttons">
                         <a href="/collection_edit?id=<?= $value['id'] ?>" class="btn-edit">Редактировать</a>
-                        <a href="/collection_remove?id=<?= $value['id'] ?>" class="remove" style="line-height: 34px;"> Удалить</a>
+                        <a href="/collection_remove?id=<?= $value['id'] ?>" class="remove" style="line-height: 34px;">Удалить</a>
                     </div>
                 </a>
             </div>

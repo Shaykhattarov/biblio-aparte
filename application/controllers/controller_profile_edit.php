@@ -41,6 +41,8 @@ class Controller_Profile_Edit extends Controller
             }
         }
 
+        $data['nickname'] = $_SESSION['nickname'];
+
         $this->view->generate('profile_edit_view.php', 'template_view.php', $data);
     }
 
